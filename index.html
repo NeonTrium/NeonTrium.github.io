@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 🤖 Meta tags that make Google-senpai notice us -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Network - Access Protocol</title>
+
+  <meta name="description" content="Enter the NeonTrium Network — a cinematic, interactive multiverse where Neontrium, hyprZona, and Glitchpocalypse collide. Choose your access protocol and meet Smarty Pants, your world-class AI companion.">
+
+  <meta name="keywords" content="hyprZona, Neontrium, Glitchpocalypse, AI website, 2D web game, cyberpunk design, interactive landing page, HTML JS CSS, creative web portfolio, indie games, Beyond the Illusions, psychological horror games, indie game developer, dVlpr games, comedy horror games">
+
+  <meta name="author" content="dVlpr">
+
+   <!-- 🎯 SEO juice that makes Google-chan blush -->
+  <meta property="og:title" content="hyprZona Network — Access Protocol Gateway">
+  <meta property="og:description" content="A cinematic, interactive entry into the hyprZona multiverse. Choose your protocol — Standard or Glitchverse.">
+  <meta property="og:image" content="https://hyprzona.github.io/assets/og-banner.png">
+  <meta property="og:url" content="https://hyprzona.github.io/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="hyprZona Network — Access Protocol Gateway">
+  <meta name="twitter:description" content="An interactive cyberpunk experience featuring AI companion Smarty Pants.">
+  <!--<meta name="twitter:image" content="https://hyprzona.github.io/assets/og-banner.png">-->
+
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczPovj3K4MaAUfL_W3L4UbHWx0z6x_NiazSkvgOYD7L1ndHGNH0Wap-IhI3KN7Bf7iAILViSqMA466gVHNVIr5GviJ359y1uHB8FFYaOAtBZQChc8DwKlCuotrfkBCszo_OxHsW1SZvwS1PnEsvjYZ81=w1393-h928-s-no-gm?authuser=0">
+
+  <link rel="stylesheet" href="index.css">
+
+  <meta name="color-scheme" content="dark">
+
+  <!-- 🤖 Structured data for Google's robot overlords -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NeonTrium",
+      "url": "https://NeonTrium.github.io",
+      "description": "Home of dVlpr - The Developer, lol",
+      "creator": {
+        "@type": "Person",
+        "name": "dVlpr"
+      }
+    }
+    </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FW17RSLYQ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FW17RSLYQ9');
+</script>
+
+<body>
+    <!-- Audio Elements -->
+    <audio id="bootSound" preload="auto">
+        <source src="audio/boot-hum.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="typeSound" preload="auto">
+        <source src="audio/type-click.wav" type="audio/mpeg">
+    </audio>
+
+    <!-- Loading Sequence -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">BOOTING dVlpr SYSTEM CORE…</div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+            <div class="loading-status" id="loadingStatus">0%</div>
+        </div>
+        <div class="scan-lines"></div>
+    </div>
+
+    <!-- Background Layers -->
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+    <div class="cyber-noise"></div>
+    
+    <!-- Cinematic Data Stream -->
+    <div class="data-stream-container" id="dataStream">
+        <div class="data-column" style="--delay: 0s;"></div>
+        <div class="data-column" style="--delay: 0.3s;"></div>
+        <div class="data-column" style="--delay: 0.6s;"></div>
+        <div class="data-column" style="--delay: 0.9s;"></div>
+        <div class="data-column" style="--delay: 1.2s;"></div>
+        <div class="data-column" style="--delay: 0.5s;"></div>
+        <div class="data-column" style="--delay: 0.8s;"></div>
+        <div class="data-column" style="--delay: 1.1s;"></div>
+    </div>
+    
+    <!-- Rotating Holographic Rings -->
+    <div class="holographic-rings" id="holoRings">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="ring ring-4"></div>
+    </div>
+    
+    <!-- Neural Network Lines -->
+    <canvas id="neuralCanvas"></canvas>
+
+    <!-- Particle Canvas (WebGL Effect) -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Foreground Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Smarty Pants and Dialogue Section -->
+        <div class="smarty-dialogue-wrapper">
+            <!-- Smarty Pants AI Mascot -->
+            <div class="smarty-container" id="smartyPants">
+                <div class="glow-effect"></div>
+                <div class="hologram-frame">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMHKCUXOnR4gsxg1SRUsJP6_zf6e2-sX8_H4APhNy6yGZT4vnpttWYom9T3E1z6jDqXiUCOLn2wVsv9ynw_ppV0ewLHZAb9sMrSrv9APDA4hLsuW72FYmE_bSB2J6cLA7Mth2fCDrIWF9ggPmIZlAn4=w870-h870-s-no-gm?authuser=1" alt="Smarty Pants" class="smarty-pfp">
+                    <div class="scan-effect"></div>
+                </div>
+                <div class="cursor-ripple" id="cursorRipple"></div>
+                <div class="smarty-name">SMARTY PANTS</div>
+            </div>
+
+            <!-- Dialogue Box -->
+            <div class="dialogue-box" id="dialogueBox">
+                <div class="dialogue-header">
+                    <span class="status-indicator"></span>
+                    <span class="dialogue-title">"AI" COMPANION v2.0</span>
+                    <div class="dialogue-controls">
+                        <span class="control-dot"></span>
+                        <span class="control-dot"></span>
+                        <span class="control-dot"></span>
+                    </div>
+                </div>
+                <div class="dialogue-content">
+                    <div class="dialogue-text" id="dialogueText"></div>
+                    <div class="typing-indicator" id="typingIndicator">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="dialogue-arrow"></div>
+            </div>
+        </div>
+
+        <!-- Welcome Text -->
+        <div class="welcome-text" id="welcomeText">
+            <h1 class="glitch-text" data-text="Welcome to the hyprZona Network.">
+                <span class="text-line">Initializing Access to</span>
+                <span class="text-highlight">The NeonTrium Network.</span>
+            </h1>
+            <p class="subtitle-text">Select your preferred exploration mode.</p>
+            <div class="text-underline"></div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="cta-container" id="ctaContainer">
+            <a href="#" class="cta-button neon-protocol" data-protocol="standard">
+                <div class="cta-bg-effect"></div>
+                <div class="cta-inner">
+                    <div class="cta-icon-wrapper">
+                        <span class="icon">🤠</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <span class="label">Standard</span>
+                    <span class="sublabel">Neon UI</span>
+                    <div class="cta-line"></div>
+                </div>
+                <div class="cta-glow"></div>
+                <div class="cta-particles">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </a>
+            <a href="#" class="cta-button glitch-protocol" data-protocol="exploration">
+                <div class="cta-bg-effect"></div>
+                <div class="cta-inner">
+                    <div class="cta-icon-wrapper">
+                        <span class="icon">🎮</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <span class="label">Exploration</span>
+                    <span class="sublabel">Glitchverse</span>
+                    <div class="cta-line"></div>
+                </div>
+                <div class="cta-glow"></div>
+                <div class="cta-particles">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Easter Egg Input Detector -->
+    <input type="text" id="hiddenInput" class="hidden-input" autocomplete="off">
+
+    <script src="index.js"></script>
+</body>
+</html>
