@@ -1141,7 +1141,7 @@ body {
 
 .text-highlight::before,
 .text-highlight::after {
-    content: 'hyprZona Network.';
+    content: 'The NeonTrium Network.';
     position: absolute;
     left: 0;
     top: 0;
